@@ -1,0 +1,12 @@
+<div ng-repeat="table in tables">
+	<ul class="chart" style="width:{{width}}px; height:{{height}}px;">
+		<div class="y" style="width:{{height}}px;">{{yAxis}}</div>
+  		<div class="x">{{xAxis}}</div>
+		<div ng-if="table.type == 'dot'">
+			<li ng-repeat="dot in table.items" class="{{table.type}}" style="bottom:{{dot.y / table.maxy * height - 10}}px; left:{{width / ((table.maxx + 0.5) / dot.x) }}px;"><span>{{dot.x}} - {{dot.y}}</span></li>
+		</div>
+		<div ng-if="table.type == 'bar'">
+			<div ng-repeat="bar in table.items track by $index" class="bar" style="height:{{bar.y / table.maxy * height}}px; width:{{width / table.items.length }}px; left:{{width / table.items.length * bar.x / 2 - (width / table.items.length )  }}px;"><span>{{bar.x}} - {{bar.y}}</span></div>
+		</div>	  	
+	</ul>
+</div>

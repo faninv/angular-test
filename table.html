@@ -1,0 +1,12 @@
+<div ng-repeat="table in tables">
+	<table class="values-table">
+		<tr>
+			<th><b>X</b></th>
+			<th><b>Y</b></th>
+		</tr>
+		<tr ng-repeat="item in table.items">
+			<td>{{item.x}}</td>
+			<td>{{item.y}}</td>
+		</tr>	
+	</table>
+</div>
