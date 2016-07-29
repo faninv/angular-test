@@ -1,4 +1,8 @@
 body {
+  /*text-align: center;*/
+}
+/* task 3 */
+.values-table th{
   text-align: center;
 }
 .chart {
@@ -80,17 +84,20 @@ body {
     box-sizing: border-box;
 }
 
-#tabs{
-  display: inline-block;
+.tabs{
+    text-align: center;
+    width: 400px;
+    border: 1px solid black;
+    padding: 10px 20px;
 }
 
-#tabs > ul {
+.tabs > ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#tabs > ul > li  {
+.tabs > ul > li  {
   float: left;
   border: 1px solid #000;
   border-bottom-width: 0;
@@ -99,7 +106,7 @@ body {
   background-color: #CCC;
   color: #696969;
 }
-#mainView {
+.table-wrapper {
   border: 1px solid black;
   clear: both;
 
@@ -124,9 +131,4 @@ body {
 }
 .values-table tr:last-child td{
   border-bottom: 0;
-}
-
-/* task 2 */
-.table-items{
-  width: 
 }
