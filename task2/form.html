@@ -1,0 +1,14 @@
+<form class="form-horizontal" ng-model="form">    
+  <div class="form-group col-sm-4">
+    <label for="name" class="col-sm-2 control-label">Item Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" ng-model="form.itemName" required />        
+    </div>
+  </div>
+  <input type="hidden" ng-model="$scope.objectIndex" class="ng-valid">
+  <div class="btn-group col-sm-2">
+    <button type="button" class="btn btn-primary btn" ng-click="save()" ng-disabled="form.itemName.$invalid" >
+    <i class="glyphicon glyphicon glyphicon-ok-circle"></i>Save</button>
+  </div>
+</form>
+{{message}}
